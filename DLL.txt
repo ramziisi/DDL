@@ -1,0 +1,15 @@
+CREATE TABLE customer(
+customer-id varchar(20)CONSTRAINT PRIMARY PRIMARYKEY,
+customer-name varchar(20) CONSTRAINT NOT NOTNULL,
+customer-tel NUMBER)
+CREATE TABLE product (
+product-id varchar(20)CONSTRAINT PRIMARY PRIMARYKEY,
+product-name varchar(20) CONSTRAINT NOT NOTNULL,
+price NUMBER CONSTARINT POSTIVE (price>0))
+CREATE TABLE ordre(
+CONSTRAINT fk FORIGNKEY customer-id REFERENCES customer (customer-id),
+CONSTRAINT fkp FORIGNKEY product-id REFERENCES product (product-id),
+
+qunatite NUMBER,
+total-aumont)
+
